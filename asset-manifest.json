@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TTK/static/css/main.320305b3.css",
+    "main.js": "/TTK/static/js/main.473d65de.js",
+    "static/media/banner.png": "/TTK/static/media/banner.e3a9bedc7d2c8571d6a4.png",
+    "static/media/LogoTTK.jpg": "/TTK/static/media/LogoTTK.13f5770df6b140fb4dc4.jpg",
+    "static/media/search.svg": "/TTK/static/media/search.d31d836d3650881f2c185acfdd291dff.svg",
+    "index.html": "/TTK/index.html",
+    "main.320305b3.css.map": "/TTK/static/css/main.320305b3.css.map",
+    "main.473d65de.js.map": "/TTK/static/js/main.473d65de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.320305b3.css",
+    "static/js/main.473d65de.js"
+  ]
+}
