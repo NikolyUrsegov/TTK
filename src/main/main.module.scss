@@ -1,0 +1,52 @@
+.block{
+  width: 100%;
+  height: 100%;
+  .banner{
+    width: 100%;
+    height: 190px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container{
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0 147px 0 147px;
+    .infoBlock{
+      margin: 48px 0 24px 0;
+      h3{
+        margin: 8px 0 24px 0;
+        padding-left: 20px;
+        font-size: 1.4em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #2B4367;
+        position: relative;
+        &:before{
+          position: absolute;
+          height: 100%;
+          left: 0;
+          width: 5px;
+          content: '';
+          background: #fcb900;
+
+        }
+      }
+      span{
+        color: #404348;
+        letter-spacing: 1px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+
+}
