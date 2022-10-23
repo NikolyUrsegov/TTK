@@ -123,3 +123,15 @@
     }
   }
 }
+.activeLink{
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #fcb900;
+
+  }
+    background: #eeeeee;
+}

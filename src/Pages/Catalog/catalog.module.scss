@@ -1,0 +1,19 @@
+@import '../../main/main.module';
+
+.block {
+  .container {
+    max-width: 100%;
+    min-height: 100%;
+    margin: 48px 147px 48px 147px;
+    display: flex;
+    justify-content: space-between;
+    .containerBlock{
+      width: 70%;
+      .catalog{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

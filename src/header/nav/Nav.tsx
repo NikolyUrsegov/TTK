@@ -2,6 +2,7 @@ import React from 'react';
 import s from './nav.module.scss'
 import logo from '../../assets/images/LogoTTK.jpg'
 import search from '../../assets/images/search.svg'
+import {NavLink} from "react-router-dom";
 
 export const Nav = () => {
     return (
@@ -9,13 +10,18 @@ export const Nav = () => {
             <div className={s.container}>
                 <div className={s.blockNav}>
                     <div className={s.logo}>
-                        <img src={logo} alt={'logo'}/>
+                        <NavLink to={'/'}><img src={logo} alt={'logo'}/></NavLink>
                     </div>
                     <div className={s.nav}>
-                        <a>КАТАЛОГ</a>
-                        <a>ДОСТАВКА</a>
-                        <a>О НАС</a>
-                        <a>КОНТАКТЫ</a>
+                        <NavLink to={'/catalog'} className={({isActive}) =>
+                            isActive ? s.activeLink : undefined}
+                        >КАТАЛОГ</NavLink>
+                        <NavLink to={'/delivery'} className={({isActive}) => isActive ? s.activeLink : undefined }
+                        >ДОСТАВКА</NavLink>
+                        <NavLink to={'/about'} className={({ isActive }) => isActive ? s.activeLink : undefined}
+                        >О НАС</NavLink>
+                        <NavLink to={'/contacts'} className={({ isActive }) => isActive ? s.activeLink : undefined}
+                        >КОНТАКТЫ</NavLink>
                     </div>
                 </div>
                 <div className={s.searchBlock}>

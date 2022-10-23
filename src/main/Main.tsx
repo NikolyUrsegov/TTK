@@ -14,6 +14,7 @@ import electricalEngineering from '../assets/images/catalog/electricalengineerin
 import electroMotors from '../assets/images/catalog/electromotors.png'
 import filters from '../assets/images/catalog/filters.png'
 import pneumatics from '../assets/images/catalog/pneumatics.png'
+import {Title} from "../components/title/main/Title";
 
 export const Main = () => {
     return (
@@ -21,23 +22,23 @@ export const Main = () => {
             <div className={s.banner} style={backgroundImg(banner)}></div>
             <div className={s.container}>
                 <div className={s.infoBlock}>
-                    <h3>КОМПЛЕКТУЮЩИЕ</h3>
+                    <Title title={'КОМПЛЕКТУЮЩИЕ'}/>
                     <span>На сегодняшний день наша компания является быстро развивающейся и работающей на формирование
                         положительного и добросовестного статуса поставщика комплектующих и запасных частей для
                         промышленного оборудования.</span>
                 </div>
                 <div className={s.content}>
-                    <CatalogItem title={"гидравлика"} img={gidravlika}/>
-                    <CatalogItem title={"датчики"} img={sensor}/>
-                    <CatalogItem title={"кабельная продукция"} img={kabels}/>
-                    <CatalogItem title={"механика"} img={mechanics}/>
-                    <CatalogItem title={"муфты"} img={couplings}/>
-                    <CatalogItem title={"пневматика"} img={pneumatics}/>
-                    <CatalogItem title={"подшипники"} img={bearings}/>
-                    <CatalogItem title={"фильтры"} img={filters}/>
-                    <CatalogItem title={"шпиндели"} img={spindle}/>
-                    <CatalogItem title={"электродвигатели"} img={electroMotors}/>
-                    <CatalogItem title={"электротехника"} img={electricalEngineering}/>
+                    <CatalogItem title={"гидравлика"} param={'gidravlika'} img={gidravlika}/>
+                    <CatalogItem title={"датчики"} param={'sensor'} img={sensor}/>
+                    <CatalogItem title={"кабельная продукция"} param={'kabels'} img={kabels}/>
+                    <CatalogItem title={"механика"} param={'mechanics'} img={mechanics}/>
+                    <CatalogItem title={"муфты"} param={'couplings'} img={couplings}/>
+                    <CatalogItem title={"пневматика"} param={'pneumatics'} img={pneumatics}/>
+                    <CatalogItem title={"подшипники"} param={'bearings'} img={bearings}/>
+                    <CatalogItem title={"фильтры"} param={'filters'} img={filters}/>
+                    <CatalogItem title={"шпиндели"} param={'spindle'} img={spindle}/>
+                    <CatalogItem title={"электродвигатели"} param={'electroMotors'} img={electroMotors}/>
+                    <CatalogItem title={"электротехника"} param={'electengin'} img={electricalEngineering}/>
                 </div>
 
             </div>
