@@ -15,11 +15,17 @@
       display: flex;
 
       .logo {
-        img {
-          padding: 5px;
-          width: 150px;
-          max-height: 65px;
+        a{
+          color: #2B4367;
+
+          .lg {
+            padding: 5px;
+            width: 150px;
+            max-height: 65px;
+            color: #2B4367;
+          }
         }
+
       }
 
       .nav {

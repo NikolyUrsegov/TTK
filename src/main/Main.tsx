@@ -30,7 +30,6 @@ export const Main = () => {
                 <div className={s.content}>
                     <CatalogItem title={"гидравлика"} param={'gidravlika'} img={gidravlika}/>
                     <CatalogItem title={"датчики"} param={'sensor'} img={sensor}/>
-                    <CatalogItem title={"кабельная продукция"} param={'kabels'} img={kabels}/>
                     <CatalogItem title={"механика"} param={'mechanics'} img={mechanics}/>
                     <CatalogItem title={"муфты"} param={'couplings'} img={couplings}/>
                     <CatalogItem title={"пневматика"} param={'pneumatics'} img={pneumatics}/>

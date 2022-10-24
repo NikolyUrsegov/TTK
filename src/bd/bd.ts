@@ -66,6 +66,7 @@ import gebr from './images/gebr_logo.jpeg'
 import vp from './images/vp_logo.jpeg'
 import vesper from './images/vesper_logo.gif'
 import epk from './images/epk_logo.jpeg'
+import spinner from './images/spinner.jpg'
 
 type Category =
     'mechanics'
@@ -80,6 +81,7 @@ type Category =
     | 'electengin'
     | 'bearings'
     | null
+
 export type BrandsType = {
     id: string,
     name: string,
@@ -87,6 +89,7 @@ export type BrandsType = {
     category: Category[],
     description: string
 }
+
 export const brands: BrandsType[] = [
     {
         id: "AC-Motoren GmbH",
@@ -183,7 +186,7 @@ export const brands: BrandsType[] = [
         id: "Bosch Rexroth",
         name: "Bosch Rexroth",
         image: bosch,
-        category: ["gidravlika", "pneumatics", "mechanics", "electengin"],
+        category: ["gidravlika", "pneumatics", "mechanics", "electengin", 'spindle'],
         description: 'Bosch Rexroth является ведущим мировым производителем и поставщиком промышленной гидравлики, мобильной гидравлики, пневматики, контроля процесса, систем автоматики.'
     },
     {
@@ -566,6 +569,13 @@ export const brands: BrandsType[] = [
         description: 'Smedegaard изготавливает насосы для различных промышленных задач, а также аппаратуру для управления насосами и насосными установками. Насосы Smedegaard надежные, бесшумные в работе и легкоуправляемые при эксплуатации.'
     },
     {
+        id: "Spinner",
+        name: "Spinner",
+        image: spinner,
+        category: ['spindle'],
+        description: 'Компания SPINNER является производителем средних размеров, производящим и продающим ежегодно по всему миру более 1000 станков с КЧПУ с тенденцией к росту производства и продаж. Компания ориентирована как на группу предприятий, действующих в мировом масштабе, так и на быстрые, гибкие и функционирующие с минимальными издержками структуры частной компании, управляемой семьей ее владельца.'
+    },
+    {
         id: "Gebr. Steimel GmbH & Co",
         name: "Gebr. Steimel GmbH & Co",
         image: gebr,
@@ -589,7 +599,7 @@ export const brands: BrandsType[] = [
             'Выпускаемые компанией ПЧ отвечают всем современным требованиям, предъявляемым к данному классу оборудования и не уступают по своим техническим параметрам и надежности в работе лучшим импортным аналогам, представленным в РФ.'
     },
     {
-        id: "Mitsubishi Electric",
+        id: "EPK",
         name: "Подшипники EPK",
         image: epk,
         category: ['bearings'],

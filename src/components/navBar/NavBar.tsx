@@ -16,11 +16,6 @@ export const NavBar = () => {
                 >Датчики</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to={'/catalog/kabels'}
-                         className={({isActive}) => isActive ? s.activeLink : undefined }
-                >Кабельная продукция</NavLink>
-            </div>
-            <div className={s.item}>
                 <NavLink to={'/catalog/mechanics'}
                          className={({isActive}) => isActive ? s.activeLink : undefined }
                 >Механика</NavLink>

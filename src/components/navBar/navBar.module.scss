@@ -1,10 +1,10 @@
 .block {
   width: 255px;
-  height: 560px;
+  min-height: 500px;
   background: #eeeeee;
   border: 1px solid #ccc;
   border-radius: 5px;
-
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
 
   .item {
     width: 100%;

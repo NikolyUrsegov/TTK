@@ -26,7 +26,6 @@ export const Footer = () => {
                         <div className={s.nav}>
                             <div className={s.linkItem}><a>Гидравлика</a></div>
                             <div className={s.linkItem}><a>Датчики</a></div>
-                            <div className={s.linkItem}><a>Кабельная продукция</a></div>
                             <div className={s.linkItem}><a>Механика</a></div>
                             <div className={s.linkItem}><a>Муфты</a></div>
                             <div className={s.linkItem}><a>Пневматика</a></div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './nav.module.scss'
-import logo from '../../assets/images/LogoTTK.jpg'
+import logo from '../../assets/images/GammaVectorLogo.png'
 import search from '../../assets/images/search.svg'
 import {NavLink} from "react-router-dom";
 
@@ -10,9 +10,10 @@ export const Nav = () => {
             <div className={s.container}>
                 <div className={s.blockNav}>
                     <div className={s.logo}>
-                        <NavLink to={'/'}><img src={logo} alt={'logo'}/></NavLink>
+                        <NavLink to={'/'}><img src={logo} alt={'logo'} className={s.lg}/></NavLink>
                     </div>
                     <div className={s.nav}>
+
                         <NavLink to={'/catalog'} className={({isActive}) =>
                             isActive ? s.activeLink : undefined}
                         >КАТАЛОГ</NavLink>
