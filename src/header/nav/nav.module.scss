@@ -15,13 +15,13 @@
       display: flex;
 
       .logo {
+        text-align: right;
         a{
           color: #2B4367;
 
           .lg {
-            padding: 5px;
-            width: 150px;
-            max-height: 65px;
+            width: 120px;
+            max-height: 70px;
             color: #2B4367;
           }
         }

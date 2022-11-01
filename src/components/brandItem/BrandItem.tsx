@@ -7,7 +7,7 @@ type BrandItemPropsType = {
     item: BrandsType
 }
 
-const BrandItem: React.FC<BrandItemPropsType> = ({item}) => {
+export const BrandItem: React.FC<BrandItemPropsType> = ({item}) => {
     return (
         <div className={s.block}>
             <NavLink to={`/brand/${item.id}`}>
@@ -18,4 +18,3 @@ const BrandItem: React.FC<BrandItemPropsType> = ({item}) => {
     );
 };
 
-export default BrandItem;

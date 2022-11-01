@@ -1,0 +1,94 @@
+.btn {
+  position: absolute;
+  top: 170px;
+  left: 180px;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+  border: 1px solid #2B4367;
+  border-radius: 3px;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, .4);
+  transition: .2s;
+  &:hover{
+    background: rgba(255, 255, 255, .8);
+  }
+}
+
+.block {
+  .container {
+    max-width: 100%;
+    min-height: 100%;
+    margin: 48px 147px 48px 147px;
+    display: flex;
+    flex-direction: column;
+
+    .contacts {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+
+      .item {
+        width: 550px;
+        height: 220px;
+        background: #F0F0F0;
+        margin-bottom: 30px;
+
+        .contact {
+          padding: 30px;
+          .infoBlock {
+            position: relative;
+            h3 {
+              font-size: 1em;
+              color: #2B4367;
+              text-transform: uppercase;
+              margin-bottom: 15px;
+              font-weight: bold;
+            }
+
+            a {
+              margin-top: 10px;
+              display: block;
+              color: #404348;
+              transition: .3s;
+              font-weight: 500;
+
+              &:hover {
+                color: #2D98AC;
+              }
+            }
+
+            span {
+              display: block;
+              line-height: 1.2;
+              font-size: .9em;
+              margin-bottom: 15px;
+            }
+            button{
+              @extend .btn;
+              top: 100px;
+              left: 0;
+            }
+          }
+        }
+      }
+
+      .blockContact {
+        width: 550px;
+        height: 265px;
+        text-align: center;
+        position: relative;
+
+        img {
+          width: 450px;
+          height: 265px;
+        }
+        .btn{
+          @extend .btn
+        }
+      }
+    }
+  }
+
+}

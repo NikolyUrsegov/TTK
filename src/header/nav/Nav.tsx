@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './nav.module.scss'
-import logo from '../../assets/images/GammaVectorLogo.png'
-import search from '../../assets/images/search.svg'
-import {NavLink} from "react-router-dom";
+import logo from '../../assets/images/logoTTK.svg'
+import searchIcn from '../../assets/images/search.svg'
+import {NavLink, useNavigate} from "react-router-dom";
 
 export const Nav = () => {
+    const navigate = useNavigate()
+    const [search, setSearch] = useState('')
+    const onSearchClick = () => {
+        navigate(`/search/${search}`)
+        setSearch('')
+    }
+
     return (
         <div className={s.block}>
             <div className={s.container}>
@@ -27,9 +34,12 @@ export const Nav = () => {
                 </div>
                 <div className={s.searchBlock}>
                     <div className={s.search}>
-                        <input placeholder={'Что будем искать'}/>
-                        <button>
-                            <img src={search}/>
+                        <input placeholder={'Что будем искать'}
+                               onChange={(e) => setSearch(e.currentTarget.value)}
+                               value={search}
+                        />
+                        <button  onClick={onSearchClick} disabled={!search}>
+                            <img src={searchIcn}/>
                         </button>
                     </div>
                     <div className={s.ans}>

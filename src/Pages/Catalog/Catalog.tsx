@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './catalog.module.scss'
 import {Title} from "../../components/title/main/Title";
-import BrandItem from "../../components/brandItem/BrandItem";
+import {BrandItem} from "../../components/brandItem/BrandItem";
 import {brands} from "../../bd/bd";
 import {useParams} from "react-router-dom";
 import {NavBar} from "../../components/navBar/NavBar";
 
-const Catalog = () => {
+export const Catalog = () => {
     const params = useParams()
     let items = brands
 
@@ -29,4 +29,3 @@ const Catalog = () => {
     );
 };
 
-export default Catalog;

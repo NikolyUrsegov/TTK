@@ -15,11 +15,17 @@ import electroMotors from '../assets/images/catalog/electromotors.png'
 import filters from '../assets/images/catalog/filters.png'
 import pneumatics from '../assets/images/catalog/pneumatics.png'
 import {Title} from "../components/title/main/Title";
+import {Carousel} from "../components/carousel/Carousel";
+import {Banner} from "../components/paralaxBanner/ParallaxBanner";
+
 
 export const Main = () => {
+
     return (
         <div className={s.block}>
-            <div className={s.banner} style={backgroundImg(banner)}></div>
+            <div className={s.banner} style={backgroundImg(banner)}>
+                <Carousel/>
+            </div>
             <div className={s.container}>
                 <div className={s.infoBlock}>
                     <Title title={'КОМПЛЕКТУЮЩИЕ'}/>
@@ -39,7 +45,15 @@ export const Main = () => {
                     <CatalogItem title={"электродвигатели"} param={'electroMotors'} img={electroMotors}/>
                     <CatalogItem title={"электротехника"} param={'electengin'} img={electricalEngineering}/>
                 </div>
-
+            </div>
+            <Banner/>
+            <div className={s.container} style={{height:260}}>
+                <div className={s.infoBlock} >
+                    <Title title={'ПАРТНЕРЫ'}/>
+                    <span>Наша цель – комплексное обеспечение наших клиентов комплектующими и запасными частями ко всем
+                        типам оборудования на постоянной основе от любых производителей.
+                        Нашими постоянными партнерами являются уже более сотни компаний-производителей.</span>
+                </div>
             </div>
         </div>
     );
