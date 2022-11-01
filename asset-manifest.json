@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TTK/static/css/main.0effdb63.css",
-    "main.js": "/TTK/static/js/main.9c3103c1.js",
+    "main.css": "/TTK/static/css/main.f5692533.css",
+    "main.js": "/TTK/static/js/main.78908437.js",
     "static/media/banner.png": "/TTK/static/media/banner.e3a9bedc7d2c8571d6a4.png",
     "static/media/DHL.jpeg": "/TTK/static/media/DHL.d65b157eeb681cf97c2e.jpeg",
     "static/media/siemens_logo.jpeg": "/TTK/static/media/siemens_logo.eafa9a60a0fed477a585.jpeg",
@@ -9,8 +9,9 @@
     "static/media/dpd.png": "/TTK/static/media/dpd.eb1862f85e0936239116.png",
     "static/media/Balluff.jpeg": "/TTK/static/media/Balluff.4ebbb29d500f5fb2deb3.jpeg",
     "static/media/lenze_logo.jpeg": "/TTK/static/media/lenze_logo.44c56bc093c92bc880ad.jpeg",
+    "static/media/parallaxBaner.jpeg": "/TTK/static/media/parallaxBaner.422b988a57af15eb82d6.jpeg",
     "static/media/bosch.jpeg": "/TTK/static/media/bosch.08a6b20334840c5c7b57.jpeg",
-    "static/media/GammaVectorLogo.png": "/TTK/static/media/GammaVectorLogo.d3a14d873a23230b897b.png",
+    "static/media/bg-contact.png": "/TTK/static/media/bg-contact.f81f012aaeec5bda9895.png",
     "static/media/spinner.jpg": "/TTK/static/media/spinner.0569cc39d3d59e77c467.jpg",
     "static/media/serfilco_logo.png": "/TTK/static/media/serfilco_logo.634adcddd36d11755ef6.png",
     "static/media/sdek.jpeg": "/TTK/static/media/sdek.939f8ab5f74ca75c1b17.jpeg",
@@ -26,14 +27,20 @@
     "static/media/vp_logo.jpeg": "/TTK/static/media/vp_logo.d989d8424d0e2df75fc7.jpeg",
     "static/media/Donaldson.jpeg": "/TTK/static/media/Donaldson.56752870a530ea92fbd2.jpeg",
     "static/media/deliveryimg.jpeg": "/TTK/static/media/deliveryimg.a5083956686972d9bff6.jpeg",
+    "static/media/about.png": "/TTK/static/media/about.3204260bf4a26b551c45.png",
     "static/media/ag-logo.jpeg": "/TTK/static/media/ag-logo.c4ba2a26a7153dcf02d0.jpeg",
+    "static/media/slick.svg": "/TTK/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/TTK/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/TTK/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/TTK/static/media/slick.295183786cd8a1389865.woff",
     "static/media/search.svg": "/TTK/static/media/search.d31d836d3650881f2c185acfdd291dff.svg",
     "index.html": "/TTK/index.html",
-    "main.0effdb63.css.map": "/TTK/static/css/main.0effdb63.css.map",
-    "main.9c3103c1.js.map": "/TTK/static/js/main.9c3103c1.js.map"
+    "static/media/logoTTK.svg": "/TTK/static/media/logoTTK.8abed9c27ad12b5dd71009798016337b.svg",
+    "main.f5692533.css.map": "/TTK/static/css/main.f5692533.css.map",
+    "main.78908437.js.map": "/TTK/static/js/main.78908437.js.map"
   },
   "entrypoints": [
-    "static/css/main.0effdb63.css",
-    "static/js/main.9c3103c1.js"
+    "static/css/main.f5692533.css",
+    "static/js/main.78908437.js"
   ]
 }
