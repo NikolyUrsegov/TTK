@@ -23,7 +23,7 @@ export const Search = () => {
                             <span><img src={searchIcn}/>Посмотрите что мы нашли</span>
                         </div>
                         : <div className={`${s.head} ${s.warning}`}>
-                            <Title title={`ничего не найдено`}/>
+                            <Title title={`ничего не найдено `}/>
                             <span><img src={searchIcn}/>Попробуйте изменить запрос поиска</span>
                         </div>
                     }
