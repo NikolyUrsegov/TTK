@@ -1,6 +1,5 @@
 {
   "name": "ttk-project",
-  "homepage": "https://NikolyUrsegov.github.io/TTK",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
