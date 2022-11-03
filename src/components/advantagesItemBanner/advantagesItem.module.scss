@@ -1,7 +1,8 @@
 .item {
   box-sizing: border-box;
   min-height: 100px;
-  width: 350px;
+  max-width: 350px;
+  margin: 10px;
   background: rgba(255, 255, 255, .9);
   padding: 30px 15px 15px;
   border-radius: 3px;

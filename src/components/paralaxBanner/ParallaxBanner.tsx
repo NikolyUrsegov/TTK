@@ -3,7 +3,6 @@ import s from './parallaxBanner.module.scss'
 import banner from '../../assets/images/parallaxBaner.jpeg'
 import {ParallaxBanner} from 'react-scroll-parallax';
 import {ParallaxProvider} from 'react-scroll-parallax';
-import {Fade} from "react-awesome-reveal";
 import {Title} from "../title/main/Title";
 import arrow1 from '../../assets/images/arrow1.png'
 import arrow2 from '../../assets/images/arrow2.png'
@@ -25,16 +24,19 @@ export const Banner = () => {
                                 title={'ВЫГОДНО'}
                                 descriptions={'Минимальные сроки поставки, выгодные и гибкие условия оплаты'}
                                 direction={'left'}
+                                img={arrow1}
                             />
                             <AdvantagesItem
                                 title={'ПРОСТО'}
                                 descriptions={'Вы делаете заказ на поставку продукции, мы разрабатываем оптимальное для Вас решение'}
                                 direction={'up'}
+                                img={arrow2}
                             />
                             <AdvantagesItem
                                 title={'ЭФФЕКТИВНО'}
                                 descriptions={'Вы получаете широкий спектр продукции от одного поставщика'}
                                 direction={'right'}
+                                img={arrow3}
                             />
                         </div>
                     </div>

@@ -7,14 +7,15 @@ type AdvantagesItemPropsType = {
     title: string
     descriptions: string
     direction: "bottom-left" | "bottom-right" | "down" | "left" | "right" | "top-left" | "top-right" | "up"
+    img: string
 }
 
-export const AdvantagesItem: React.FC<AdvantagesItemPropsType> = ({title, direction,descriptions}) => {
+export const AdvantagesItem: React.FC<AdvantagesItemPropsType> = ({title, direction,descriptions, img}) => {
     return (
         <div>
             <Fade direction={direction}>
                 <div className={s.item}>
-                    <img src={arrow1}/>
+                    <img src={img} alt={'arrow'}/>
                     <div className={s.info}>
                         <h5>{title}</h5>
                         <span>{descriptions}</span>

@@ -1,3 +1,5 @@
+@import "../../assets/style/container.module";
+
 .block {
   width: 100%;
   min-height: 65px;
@@ -5,11 +7,7 @@
   box-shadow: 0 0 10px 3px rgb(0 0 0 / 10%);
 
   .container {
-    max-width: 100%;
-    height: 100%;
-    margin: 0 147px 0 147px;
-    display: flex;
-    justify-content: space-between;
+    @extend .container;
 
     .blockNav {
       display: flex;
