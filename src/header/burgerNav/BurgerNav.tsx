@@ -2,13 +2,10 @@ import React, {useState} from 'react';
 import s from "./BurgerNav.module.scss";
 import {NavLink} from "react-router-dom";
 import logo from "../../assets/images/logoTTK.svg";
-import {SearchBlock} from "../nav/searchBlock/SearchBlock";
 import {Input} from "../../components/input/input";
 import {ModalContainer} from "../../components/modal/ModalContainer";
 
-type BurgerNavPropsType = {
-    scroll: boolean
-}
+
 
 export const BurgerNav = () => {
     const [isOpenClose, setOpenClose] = useState(false)
@@ -56,9 +53,9 @@ export const BurgerNav = () => {
                             </div>
                         </ModalContainer>
                     </div>
-                    <div className={s.toggleBtn}>
+                    <div className={s.toggleBtn} onClick={() => setOpenClose(!isOpenClose)}>
                         <span>меню</span>
-                        <div className={s.smallNav} onClick={() => setOpenClose(!isOpenClose)}>
+                        <div className={s.smallNav} >
                         </div>
                     </div>
                 </div>
