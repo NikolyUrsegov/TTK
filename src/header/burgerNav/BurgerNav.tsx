@@ -4,6 +4,11 @@ import {NavLink} from "react-router-dom";
 import logo from "../../assets/images/logoTTK.svg";
 import {Input} from "../../components/input/input";
 import {ModalContainer} from "../../components/modal/ModalContainer";
+import {Icon} from "../../components/icon/Icon";
+import location from '../../assets/images/icon/location-small.svg'
+import phone from '../../assets/images/icon/phone-small.svg'
+import mail from '../../assets/images/icon/mail-small.svg'
+
 
 
 
@@ -43,9 +48,9 @@ export const BurgerNav = () => {
                             }}/>
                         </div>
                         <div className={s.info}>
-                            <a href="tel:+79031517271">8(903) 151-72-71</a>
-                            <a href="mailto:info@gammavector.ru">info@gammavector.ru</a>
-                            <span>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
+                            <a href="tel:+79031517271"><Icon icon={phone}/> 8(903) 151-72-71</a>
+                            <a href="mailto:info@gammavector.ru"><Icon icon={mail}/>info@gammavector.ru</a>
+                            <span> <Icon icon={location}/>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
                         </div>
                         <ModalContainer>
                             <div className={s.ans}>

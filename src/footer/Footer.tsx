@@ -1,7 +1,10 @@
 import React from 'react';
 import s from './footer.module.scss'
 import {TitleFooter} from "../components/title/footer/TitleFooter";
-import {Link} from "react-router-dom";
+import {Icon} from "../components/icon/Icon";
+import phone from '../assets/images/icon/phone.svg'
+import mail from '../assets/images/icon/mail.svg'
+import calendar from '../assets/images/icon/calendar.svg'
 
 export const Footer = () => {
     return (
@@ -10,9 +13,9 @@ export const Footer = () => {
                 <div className={s.container}>
                     <div className={s.contactsBlock}>
                         <TitleFooter title={'КОНТАКТЫ'}/>
-                        <a href="mailto:info@gammavector.ru">info@gammavector.ru</a>
-                        <a href="tel:+79773361819">8(977) 336-18-19</a>
-                        <span>ПН - ПТ 8-19</span>
+                        <a href="mailto:info@gammavector.ru"><Icon icon={mail}/>info@gammavector.ru</a>
+                        <a href="tel:+79773361819"><Icon icon={phone}/>8(977) 336-18-19</a>
+                        <span><Icon icon={calendar}/>ПН - ПТ 8<span className={s.sup}>00</span>-19<span className={s.sup}>00</span></span>
                     </div>
                     <div className={s.requisitesBlock}>
                         <TitleFooter title={'РЕКВИЗИТЫ'}/>
