@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import s from './nav.module.scss'
-import logo from '../../assets/images/logoTTK.svg'
+import logo from '../../../assets/images/logoTTK.svg'
 import {NavLink, useNavigate} from "react-router-dom";
 import {SearchBlock} from "./searchBlock/SearchBlock";
 

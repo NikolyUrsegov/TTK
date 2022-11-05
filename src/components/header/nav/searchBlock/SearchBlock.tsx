@@ -1,8 +1,8 @@
 import React from 'react';
 import s from "./searchBlock.module.scss";
-import {FormModal} from "../../../components/modal/FormModal";
-import {SuperInput} from "../../../components/superInput/SuperInput";
-import phone from "../../../assets/images/icon/phone-small.svg";
+import {FormModal} from "../../../modal/FormModal";
+import {SuperInput} from "../../../superInput/SuperInput";
+import phone from "../../../../assets/images/icon/phone-small.svg";
 
 
 type SearchBlockPropsType = {

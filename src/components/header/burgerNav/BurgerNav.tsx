@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import s from "./BurgerNav.module.scss";
 import {NavLink, useNavigate} from "react-router-dom";
-import logo from "../../assets/images/logoTTK.svg";
-import {Input} from "../../components/input/input";
-import {FormModal} from "../../components/modal/FormModal";
-import {Icon} from "../../components/icon/Icon";
-import location from '../../assets/images/icon/location-small.svg'
-import phone from '../../assets/images/icon/phone-small.svg'
-import mail from '../../assets/images/icon/mail-small.svg'
+import logo from "../../../assets/images/logoTTK.svg";
+import {Input} from "../../input/input";
+import {FormModal} from "../../modal/FormModal";
+import {Icon} from "../../icon/Icon";
+import location from '../../../assets/images/icon/location-small.svg'
+import phone from '../../../assets/images/icon/phone-small.svg'
+import mail from '../../../assets/images/icon/mail-small.svg'
 
 
 

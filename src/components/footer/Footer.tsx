@@ -1,10 +1,10 @@
 import React from 'react';
 import s from './footer.module.scss'
-import {TitleFooter} from "../components/title/footer/TitleFooter";
-import {Icon} from "../components/icon/Icon";
-import phone from '../assets/images/icon/phone.svg'
-import mail from '../assets/images/icon/mail.svg'
-import calendar from '../assets/images/icon/calendar.svg'
+import {TitleFooter} from "../title/footer/TitleFooter";
+import {Icon} from "../icon/Icon";
+import phone from '../../assets/images/icon/phone.svg'
+import mail from '../../assets/images/icon/mail.svg'
+import calendar from '../../assets/images/icon/calendar.svg'
 import {NavLink} from "react-router-dom";
 
 export const Footer = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './info.module.scss'
-import location from '../../assets/images/icon/location.svg'
-import phone from '../../assets/images/icon/phone.svg'
-import mail from '../../assets/images/icon/mail.svg'
-import {Icon} from "../../components/icon/Icon";
+import location from '../../../assets/images/icon/location.svg'
+import phone from '../../../assets/images/icon/phone.svg'
+import mail from '../../../assets/images/icon/mail.svg'
+import {Icon} from "../../icon/Icon";
 
 export const Info = () => {
     return (

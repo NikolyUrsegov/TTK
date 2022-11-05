@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Modal from "./Modal";
 import s from "./requisitesModal.module.scss";
-import modalImg from "../../assets/images/modal.jpeg";
 
 type RequisitesModalPropsType = {
     children?: React.ReactNode
