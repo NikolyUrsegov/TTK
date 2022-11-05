@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Modal from "./Modal";
-import s from './form.module.scss'
+import s from './formModal.module.scss'
 import modalImg from '../../assets/images/modal.jpeg'
 import {useFormik} from "formik";
 
@@ -15,7 +15,7 @@ type FormikErrorType = {
     comments?:string
 }
 
-export const ModalContainer: React.FC<ModalContainerPropsType> = ({children}) => {
+export const FormModal: React.FC<ModalContainerPropsType> = ({children}) => {
     const [show, setShow] = useState(false);
 
     const formik = useFormik({
