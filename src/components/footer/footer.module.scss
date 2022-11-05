@@ -10,7 +10,9 @@
   .container {
     padding: 40px 0 40px 0;
     @extend .container;
-    flex-wrap: wrap;
+    @include media(765px) {
+      flex-wrap: wrap;
+    }
 
     a, span {
       text-transform: uppercase;
