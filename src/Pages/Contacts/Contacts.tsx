@@ -3,6 +3,7 @@ import {Title} from "../../components/title/main/Title";
 import s from './Contacts.module.scss'
 import {YandexMap} from "../../components/yandexMap/YandexMap";
 import img from '../../assets/images/bg-contact.png'
+import {ModalContainer} from "../../components/modal/ModalContainer";
 
 export const Contacts = () => {
 
@@ -38,7 +39,9 @@ export const Contacts = () => {
                         </div>
                         <div className={s.blockContact}>
                             <img src={img}/>
-                            <button className={s.btn}>написать нам</button>
+                            <ModalContainer>
+                                <button className={s.btn}>написать нам</button>
+                            </ModalContainer>
                         </div>
                     </div>
                 </div>

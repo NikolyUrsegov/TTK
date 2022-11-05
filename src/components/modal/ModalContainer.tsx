@@ -76,7 +76,7 @@ export const ModalContainer: React.FC<ModalContainerPropsType> = ({children}) =>
                         <div className={s.fromContainer}>
                             <form onSubmit={formik.handleSubmit}>
                                 <div className={s.item}>
-                                    <span className={nameValidate ? s.red : ''}>Имя* {nameValidate && formik.errors.name}</span>
+                                    <span className={nameValidate ? `${s.sup} ${s.red}` : s.sup}>Имя* {nameValidate && formik.errors.name}</span>
                                     <input {...formik.getFieldProps("name")} placeholder={'Как вас зовут'}/>
                                 </div>
                                 <div className={s.item}>
