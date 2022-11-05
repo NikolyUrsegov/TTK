@@ -3,7 +3,8 @@ import {Title} from "../../components/title/main/Title";
 import s from './Contacts.module.scss'
 import {YandexMap} from "../../components/yandexMap/YandexMap";
 import img from '../../assets/images/bg-contact.png'
-import {ModalContainer} from "../../components/modal/ModalContainer";
+import {FormModal} from "../../components/modal/FormModal";
+import {RequisitesModal} from "../../components/modal/RequisitesModal";
 
 export const Contacts = () => {
 
@@ -33,15 +34,17 @@ export const Contacts = () => {
                                     <h3>нас можно найти:</h3>
                                     <span>Компания ООО «ТТК»</span>
                                     <span>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
-                                    <button className={s.btn}>реквизиты</button>
+                                    <RequisitesModal>
+                                        <button className={s.btn}>реквизиты</button>
+                                    </RequisitesModal>
                                 </div>
                             </div>
                         </div>
                         <div className={s.blockContact}>
                             <img src={img}/>
-                            <ModalContainer>
+                            <FormModal>
                                 <button className={s.btn}>написать нам</button>
-                            </ModalContainer>
+                            </FormModal>
                         </div>
                     </div>
                 </div>
