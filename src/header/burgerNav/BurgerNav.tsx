@@ -3,7 +3,7 @@ import s from "./BurgerNav.module.scss";
 import {NavLink, useNavigate} from "react-router-dom";
 import logo from "../../assets/images/logoTTK.svg";
 import {Input} from "../../components/input/input";
-import {ModalContainer} from "../../components/modal/ModalContainer";
+import {FormModal} from "../../components/modal/FormModal";
 import {Icon} from "../../components/icon/Icon";
 import location from '../../assets/images/icon/location-small.svg'
 import phone from '../../assets/images/icon/phone-small.svg'
@@ -20,6 +20,7 @@ export const BurgerNav = () => {
     const onSearchClick = () => {
         navigate(`/search/${search}`)
         setSearch('')
+        setOpenClose(!isOpenClose)
     }
 
 
@@ -59,11 +60,11 @@ export const BurgerNav = () => {
                             <a href="mailto:info@gammavector.ru"><Icon icon={mail}/>info@gammavector.ru</a>
                             <span> <Icon icon={location}/>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
                         </div>
-                        <ModalContainer>
+                        <FormModal>
                             <div className={s.ans}>
                                 <a>УЗНАТЬ ЦЕНУ</a>
                             </div>
-                        </ModalContainer>
+                        </FormModal>
                     </div>
                     <div className={s.toggleBtn} onClick={() => setOpenClose(!isOpenClose)}>
                         <span>меню</span>

@@ -5,6 +5,7 @@ import {Icon} from "../components/icon/Icon";
 import phone from '../assets/images/icon/phone.svg'
 import mail from '../assets/images/icon/mail.svg'
 import calendar from '../assets/images/icon/calendar.svg'
+import {NavLink} from "react-router-dom";
 
 export const Footer = () => {
     return (
@@ -27,16 +28,16 @@ export const Footer = () => {
                     <div className={s.catalogBlock}>
                         <TitleFooter title={'КАТАЛОГ'}/>
                         <div className={s.nav}>
-                            <div className={s.linkItem}><a>Гидравлика</a></div>
-                            <div className={s.linkItem}><a>Датчики</a></div>
-                            <div className={s.linkItem}><a>Механика</a></div>
-                            <div className={s.linkItem}><a>Муфты</a></div>
-                            <div className={s.linkItem}><a>Пневматика</a></div>
-                            <div className={s.linkItem}><a>Подшипники</a></div>
-                            <div className={s.linkItem}><a>Фильтры</a></div>
-                            <div className={s.linkItem}><a>Шпиндели</a></div>
-                            <div className={s.linkItem}><a>Электродвигатели</a></div>
-                            <div className={s.linkItem}><a>Электротехника</a></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/gidravlika'}>Гидравлика</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/sensor'}>Датчики</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/mechanics'}>Механика</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/couplings'}>Муфты</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/pneumatics'}>Пневматика</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/bearings'}>Подшипники</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/filters'}>Фильтры</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/spindle'}>Шпиндели</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/electroMotors'}>Электродвигатели</NavLink></div>
+                            <div className={s.linkItem}><NavLink to={'/catalog/electengin'}>Электротехника</NavLink></div>
                         </div>
                     </div>
                 </div>

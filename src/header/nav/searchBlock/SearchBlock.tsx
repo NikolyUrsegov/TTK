@@ -1,8 +1,8 @@
 import React from 'react';
 import s from "./searchBlock.module.scss";
-import {ModalContainer} from "../../../components/modal/ModalContainer";
-import {Input} from "../../../components/input/input";
+import {FormModal} from "../../../components/modal/FormModal";
 import {SuperInput} from "../../../components/superInput/SuperInput";
+import phone from "../../../assets/images/icon/phone-small.svg";
 
 
 type SearchBlockPropsType = {
@@ -15,14 +15,14 @@ export const SearchBlock: React.FC<SearchBlockPropsType> = ({search, onChange, o
     return (
         <div className={s.searchBlock}>
             <SuperInput search={search} onChange={onChange} onSearchClick={onSearchClick}/>
-            <ModalContainer>
+            <FormModal>
                 <div className={s.block}>
-
+                    <img src={phone} alt={'search'}/>
                 </div>
                 <div className={s.ans}>
                     <a>УЗНАТЬ ЦЕНУ</a>
                 </div>
-            </ModalContainer>
+            </FormModal>
         </div>
     );
 };
