@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import s from "./BurgerNav.module.scss";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import logo from "../../assets/images/logoTTK.svg";
 import {Input} from "../../components/input/input";
 import {ModalContainer} from "../../components/modal/ModalContainer";
@@ -14,6 +14,13 @@ import mail from '../../assets/images/icon/mail-small.svg'
 
 export const BurgerNav = () => {
     const [isOpenClose, setOpenClose] = useState(false)
+    const navigate = useNavigate()
+    const [search, setSearch] = useState('')
+
+    const onSearchClick = () => {
+        navigate(`/search/${search}`)
+        setSearch('')
+    }
 
 
     return (
@@ -43,9 +50,9 @@ export const BurgerNav = () => {
                             >КОНТАКТЫ</NavLink>
                         </div>
                         <div className={s.search}>
-                            <Input search={''} onChange={() => {
-                            }} onSearchClick={() => {
-                            }}/>
+                            <Input search={search}
+                                   onChange={setSearch}
+                                   onSearchClick={onSearchClick}/>
                         </div>
                         <div className={s.info}>
                             <a href="tel:+79031517271"><Icon icon={phone}/> 8(903) 151-72-71</a>
