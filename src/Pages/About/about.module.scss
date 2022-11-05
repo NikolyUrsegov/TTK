@@ -1,11 +1,16 @@
+@import "../../assets/style/container.module";
+
 .block {
   .container {
-    max-width: 100%;
-    min-height: 100%;
-    margin: 48px 147px 48px 147px;
-    display: flex;
-    justify-content: space-between;
+    @extend .container;
+    @include media(900px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .info{
+      margin: 48px 0 48px 0;
+
       display: flex;
       flex-direction: column;
       span{

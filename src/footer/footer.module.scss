@@ -1,12 +1,16 @@
 @import "../assets/style/container.module";
+@import "../assets/style/mixin";
+
 
 .block {
   width: 100%;
   min-height: 315px;
   background: #2B4367;
+
   .container {
     padding: 40px 0 40px 0;
     @extend .container;
+    flex-wrap: wrap;
 
     a, span {
       text-transform: uppercase;
@@ -22,6 +26,9 @@
       margin: 0 15px 0 15px;
       display: flex;
       flex-direction: column;
+      @include media(765px) {
+        width: 100%;
+      }
     }
 
     .requisitesBlock {
@@ -29,6 +36,10 @@
       margin: 0 15px 0 15px;
       display: flex;
       flex-direction: column;
+      @include media(765px) {
+        width: 100%;
+        margin-top: 20px;
+      }
     }
 
     .catalogBlock {
@@ -36,6 +47,11 @@
       margin: 0 15px 0 15px;
       display: flex;
       flex-direction: column;
+      @include media(765px) {
+        width: 100%;
+        margin-top: 20px;
+
+      }
 
       .nav {
         display: flex;
@@ -46,7 +62,7 @@
           height: 24px;
 
           &:hover {
-            a{
+            a {
               margin-left: 5px;
               color: gold;
             }

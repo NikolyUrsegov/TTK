@@ -13,8 +13,8 @@ export const Catalog = () => {
     if (params.sort) items = items.filter(e => e.category.some(e => e === params.sort))
 
     return (
-        <div className={s.block}>
-            <div className={s.container}>
+        <div className={s.container}>
+            <div className={s.block}>
                 <div className={s.containerBlock}>
                     <Title title={'КАТАЛОГ ПРОИЗВОДИТЕЛЕЙ'}/>
                     <div className={s.catalog}>

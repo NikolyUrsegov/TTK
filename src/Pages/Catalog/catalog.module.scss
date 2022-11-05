@@ -1,16 +1,24 @@
-@import '../../main/main.module';
+@import '../../assets/style/container.module';
+@import "../../assets/style/mixin";
 
-.block {
-  .container {
-    max-width: 100%;
-    min-height: 100%;
-    margin: 48px 147px 48px 147px;
+.container {
+ @extend .container;
+
+
+  .block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .containerBlock{
+    margin: 48px 0 48px 0;
+
+    .containerBlock {
       width: 70%;
-      .catalog{
+
+      @include media(730px){
+        width: 100%;
+      }
+
+      .catalog {
         display: flex;
         justify-content: start;
         flex-wrap: wrap;

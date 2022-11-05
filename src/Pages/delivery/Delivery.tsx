@@ -16,27 +16,29 @@ export const Delivery = () => {
         <div className={s.block}>
             <div className={s.container}>
                 <div className={s.main}>
-                    <Title title={'доставка'}/>
-                    <div className={s.info}>
+                    <div className={s.description}>
+                        <Title title={'доставка'}/>
+                        <div className={s.info}>
                         <span>
                         Мы осуществляем доставку по всей России в кротчайшие сроки на самых выгодных условиях.
                         До терминала ТК Деловые Линии в г. Москва – БЕСПЛАТНО.
                         </span>
-                        <span>
+                            <span>
                         Приоритетно «TTK» осуществляет доставку заказанного товара с участием транспортных компаний
                         ООО «Деловые Линии» и ООО «Фрейтлинк» (Ponyexpress). Рассчитайте стоимость с помощью калькулятора нашего партнера
                         </span>
+                        </div>
                     </div>
-                    <div className={s.items}>
-                        <DeliveryCart title={'Деловые Линии'} img={delLine} src={'https://www.dellin.ru/requests/'}/>
-                        <DeliveryCart title={'Pony Express'} img={pony} src={'https://www.ponyexpress.ru/support/servisy-samoobsluzhivaniya/tariff/'}/>
-                        <DeliveryCart title={'СДЭК'} img={sdek} src={'https://www.cdek.ru/ru/calculate'}/>
-                        <DeliveryCart title={'DHL'} img={dhl} src={'https://express.dhl.ru/calculator/'}/>
-                        <DeliveryCart title={'DPD'} img={dpd} src={'https://dpd.ru'}/>
-                        <DeliveryCart title={'Другая компания'} img={other} />
-                    </div>
+                    <CatalogWay img={delivery}/>
                 </div>
-                <CatalogWay img={delivery}/>
+                <div className={s.items}>
+                    <DeliveryCart title={'Деловые Линии'} img={delLine} src={'https://www.dellin.ru/requests/'}/>
+                    <DeliveryCart title={'Pony Express'} img={pony} src={'https://www.ponyexpress.ru/support/servisy-samoobsluzhivaniya/tariff/'}/>
+                    <DeliveryCart title={'СДЭК'} img={sdek} src={'https://www.cdek.ru/ru/calculate'}/>
+                    <DeliveryCart title={'DHL'} img={dhl} src={'https://express.dhl.ru/calculator/'}/>
+                    <DeliveryCart title={'DPD'} img={dpd} src={'https://dpd.ru'}/>
+                    <DeliveryCart title={'Другая компания'} img={other} />
+                </div>
             </div>
         </div>
     );

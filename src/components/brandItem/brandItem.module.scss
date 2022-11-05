@@ -1,10 +1,16 @@
+@import "../../assets/style/mixin";
+
 .block {
+  box-sizing: border-box;
   height: 80px;
   width: 111px;
   border-radius: 5px;
   border: 1px solid #F0F0F0;
   transition: .3s;
   margin: 5px;
+  @include media(730px){
+    width: 150px;
+  }
   &:hover{
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
   }

@@ -1,3 +1,5 @@
+@import "../../assets/style/container.module";
+
 .btn {
   position: absolute;
   top: 170px;
@@ -10,82 +12,143 @@
   padding: 15px 40px;
   background: rgba(255, 255, 255, .4);
   transition: .2s;
-  &:hover{
+
+  &:hover {
     background: rgba(255, 255, 255, .8);
   }
 }
 
 .block {
+
   .container {
-    max-width: 100%;
-    min-height: 100%;
-    margin: 48px 147px 48px 147px;
-    display: flex;
-    flex-direction: column;
+    @extend .container;
 
-    .contacts {
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      flex-wrap: wrap;
+    .main {
+      margin: 48px 0 48px 0;
 
-      .item {
-        width: 550px;
-        height: 220px;
-        background: #F0F0F0;
-        margin-bottom: 30px;
+      .contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        @include media(1200px) {
+          justify-content: space-around;
+        }
 
-        .contact {
-          padding: 30px;
-          .infoBlock {
-            position: relative;
-            h3 {
-              font-size: 1em;
-              color: #2B4367;
-              text-transform: uppercase;
-              margin-bottom: 15px;
-              font-weight: bold;
-            }
+        .item {
+          width: 520px;
+          height: 220px;
+          background: #F0F0F0;
+          margin: 0 10px 30px 10px;
+          @include media(1383px) {
+            width: 500px;
+          }
+          @include media(1313px) {
+            width: 420px;
+          }
+          @include media(1040px) {
+            width: 400px;
+          }
+          @include media(940px) {
+            width: 520px;
+          }
+          @include media(570px) {
+            width: 320px;
+          }
+          @include media(370px) {
+            width: 290px;
+          }
 
-            a {
-              margin-top: 10px;
-              display: block;
-              color: #404348;
-              transition: .3s;
-              font-weight: 500;
+          .contact {
+            padding: 30px;
 
-              &:hover {
-                color: #2D98AC;
+            .infoBlock {
+              position: relative;
+
+              h3 {
+                font-size: 1em;
+                color: #2B4367;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                font-weight: bold;
               }
-            }
 
-            span {
-              display: block;
-              line-height: 1.2;
-              font-size: .9em;
-              margin-bottom: 15px;
-            }
-            button{
-              @extend .btn;
-              top: 100px;
-              left: 0;
+              a {
+                margin-top: 10px;
+                display: block;
+                color: #404348;
+                transition: .3s;
+                font-weight: 500;
+
+                &:hover {
+                  color: #2D98AC;
+                }
+              }
+
+              span {
+                display: block;
+                line-height: 1.2;
+                font-size: .9em;
+                margin-bottom: 15px;
+              }
+
+              button {
+                @extend .btn;
+                top: 100px;
+                left: 0;
+                @include media(570px) {
+                  top: 120px;
+                }
+              }
             }
           }
         }
-      }
 
-      .blockContact {
-        width: 550px;
-        height: 265px;
-        text-align: center;
-        position: relative;
-
-        img {
-          width: 450px;
+        .blockContact {
+          width: 520px;
           height: 265px;
-        }
-        .btn{
-          @extend .btn
+          text-align: center;
+          position: relative;
+          @include media(1383px) {
+            width: 500px;
+          }
+
+          @include media(1313px) {
+            width: 420px;
+          }
+          @include media(1040px) {
+            width: 400px;
+          }
+          @include media(940px) {
+            width: 520px;
+          }
+          @include media(570px) {
+            height: 220px;
+            width: 320px;
+          }
+          @include media(370px) {
+            width: 290px;
+          }
+
+          img {
+            width: inherit;
+            height: inherit;
+          }
+
+          .btn {
+            @extend .btn;
+            left: 160px;
+            @include media(1313px) {
+              left: 120px;
+            }
+            @include media(940px) {
+              left: 160px;
+            }
+            @include media(570px) {
+              top: 150px;
+              left: 70px;
+            }
+          }
         }
       }
     }

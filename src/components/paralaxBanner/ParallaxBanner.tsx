@@ -15,11 +15,11 @@ export const Banner = () => {
             <ParallaxProvider>
                 <ParallaxBanner
                     layers={[{image: banner, speed: -15}]}
-                    style={{height: 420}}
+                    style={{minHeight: 420}}
                 >
                     <div className={s.container}>
                         <Title title={'работать с нами'}/>
-                        <div className={s.block}>
+                        <div className={s.main}>
                             <AdvantagesItem
                                 title={'ВЫГОДНО'}
                                 descriptions={'Минимальные сроки поставки, выгодные и гибкие условия оплаты'}

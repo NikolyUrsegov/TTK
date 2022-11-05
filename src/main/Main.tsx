@@ -47,7 +47,7 @@ export const Main = () => {
                 </div>
             </div>
             <Banner/>
-            <div className={s.container} style={{height:260}}>
+            <div className={s.container} style={{minHeight:260}}>
                 <div className={s.infoBlock} >
                     <Title title={'ПАРТНЕРЫ'}/>
                     <span>Наша цель – комплексное обеспечение наших клиентов комплектующими и запасными частями ко всем

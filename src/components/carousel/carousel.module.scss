@@ -1,13 +1,17 @@
 @import "../../assets/style/mixin";
 
-.box{
-  width: 540px;
+.box {
+  max-width: 540px;
   max-height: 190px;
   margin-left: 120px;
   @include media(1200px) {
     margin-left: 50px;
   }
-  .item{
+  @include media(630px) {
+    margin:auto;
+  }
+
+  .item {
     height: 190px;
     display: flex;
     align-items: center;

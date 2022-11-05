@@ -14,20 +14,23 @@ export const Brand = () => {
         brand ?
             <div className={s.block}>
                 <div className={s.container}>
-                    <div className={s.containerBlock}>
-                        <header>
-                            <h1>{brand.name}</h1>
-                            <img src={brand.image}/>
-                        </header>
-                        <div className={s.infoBlock}>
-                            <span className={s.brand}>Производитель: <span className={s.item}>{brand.id}</span></span>
+                    <div className={s.main}>
+                        <div className={s.containerBlock}>
+                            <header>
+                                <h1>{brand.name}</h1>
+                                <img src={brand.image}/>
+                            </header>
+                            <div className={s.infoBlock}>
+                                <span className={s.brand}>Производитель: <span
+                                    className={s.item}>{brand.id}</span></span>
+                            </div>
+                            <div className={s.description}>
+                                <Title title={brand.id}/>
+                                <p>{brand.description}</p>
+                            </div>
                         </div>
-                        <div className={s.description}>
-                            <Title title={brand.id}/>
-                            <p>{brand.description}</p>
-                        </div>
+                        <NavBar/>
                     </div>
-                    <NavBar/>
                 </div>
             </div>
             : <h1>Null</h1>
