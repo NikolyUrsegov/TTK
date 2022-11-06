@@ -5,6 +5,9 @@ import {YandexMap} from "../../components/yandexMap/YandexMap";
 import img from '../../assets/images/bg-contact.png'
 import {FormModal} from "../../components/modal/FormModal";
 import {RequisitesModal} from "../../components/modal/RequisitesModal";
+import phone from "../../assets/images/icon/phone-small.svg";
+import {Icon} from "../../components/icon/Icon";
+import mail from "../../assets/images/icon/mail-small.svg";
 
 export const Contacts = () => {
 
@@ -16,14 +19,22 @@ export const Contacts = () => {
                     <div className={s.contacts}>
                         <div className={s.item}>
                             <div className={s.contact}>
-                                <div className={s.infoBlock} style={{marginBottom: 24}}>
-                                    <h3>телефон:</h3>
-                                    <a href="tel:+79773361819">8(977) 336-18-19</a>
-                                    <a href="tel:+79031517271">8(903) 151-72-71</a>
+                                <div className={s.infoBlock} >
+                                    <h3>телефоны:</h3>
+                                    <a href="tel:+79031517271">
+                                        <Icon icon={phone}/>
+                                        <span className={s.tel}>8(903) 151-72-71</span>
+                                        <span>Виктор Пушишин</span>
+                                    </a>
+                                    <a href="tel:+79773361819">
+                                        <Icon icon={phone}/>
+                                        <span className={s.tel}>8(977) 336-18-19</span>
+                                        <span>Корнеев Роман</span>
+                                    </a>
                                 </div>
                                 <div className={s.infoBlock}>
                                     <h3>почта:</h3>
-                                    <a href="mailto:info@gammavector.ru">info@gammavector.ru</a>
+                                    <a href="mailto:info@gammavector.ru"><Icon icon={mail}/>info@gammavector.ru</a>
                                 </div>
                             </div>
                         </div>
@@ -32,8 +43,8 @@ export const Contacts = () => {
                             <div className={s.contact}>
                                 <div className={s.infoBlock}>
                                     <h3>нас можно найти:</h3>
-                                    <span>Компания ООО «ТТК»</span>
-                                    <span>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
+                                    <span className={s.mail}>Компания ООО «ТТК»</span>
+                                    <span className={s.mail}>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
                                     <RequisitesModal>
                                         <button className={s.btn}>реквизиты</button>
                                     </RequisitesModal>

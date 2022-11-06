@@ -20,11 +20,9 @@ export const Footer = () => {
                         <span><Icon icon={calendar}/>ПН - ПТ 8<span className={s.sup}>00</span>-19<span className={s.sup}>00</span></span>
                     </div>
                     <div className={s.requisitesBlock}>
-                        <TitleFooter title={'РЕКВИЗИТЫ'}/>
+                        <TitleFooter title={'нас можно найти'}/>
                         <span>Компания ООО «ТТК»</span>
-                        <span> 127106, город Москва, Алтуфьевское шоссе, дом 27, офис 216</span>
-                        <span>ИНН: 9715365020</span>
-                        <span>КПП: 771501001</span>
+                        <span>БЦ Эталон, Москва, ул.Большая Черкизовская 24а стр.1</span>
                     </div>
                     <div className={s.catalogBlock}>
                         <TitleFooter title={'КАТАЛОГ'}/>
