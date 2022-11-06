@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import s from './formModal.module.scss'
 import modalImg from '../../assets/images/modal.jpeg'
 import {useFormik} from "formik";
+import axios from "axios";
 
 type ModalContainerPropsType = {
     children?: React.ReactNode
@@ -12,11 +13,14 @@ type FormikErrorType = {
     email?: string
     phone?: string
     INN?: string
-    comments?:string
+    comments?: string
 }
+type SuccessfulSendingType = 'idle' | 'res' | 'rej'
 
 export const FormModal: React.FC<ModalContainerPropsType> = ({children}) => {
     const [show, setShow] = useState(false);
+    const [successfulSending, setSuccessfulSending] = useState<SuccessfulSendingType>('idle')
+    const [loading, setLoading] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -28,7 +32,7 @@ export const FormModal: React.FC<ModalContainerPropsType> = ({children}) => {
         },
         validate: (values) => {
             const errors: FormikErrorType = {}
-            if(!values.name) {
+            if (!values.name) {
                 errors.name = "Обязательно"
             }
 
@@ -46,8 +50,26 @@ export const FormModal: React.FC<ModalContainerPropsType> = ({children}) => {
             return errors;
         },
         onSubmit: values => {
-            console.log(values)
-            formik.resetForm()
+            setLoading(true)
+            axios.post('https://smpt-gmail.vercel.app/sendMessage/', {...values})
+                .then(res => {
+                        setSuccessfulSending('res')
+                        formik.resetForm()
+                        setTimeout(() => {
+                            setSuccessfulSending('idle')
+                            setShow(false)
+                        }, 5000)
+                    }
+                )
+                .catch(rej => {
+                    setSuccessfulSending('rej')
+                    setTimeout(() => {
+                        setSuccessfulSending('idle')
+                    }, 5000)
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
         },
     })
 
@@ -76,15 +98,18 @@ export const FormModal: React.FC<ModalContainerPropsType> = ({children}) => {
                         <div className={s.fromContainer}>
                             <form onSubmit={formik.handleSubmit}>
                                 <div className={s.item}>
-                                    <span className={nameValidate ? `${s.sup} ${s.red}` : s.sup}>Имя* {nameValidate && formik.errors.name}</span>
+                                    <span
+                                        className={nameValidate ? `${s.sup} ${s.red}` : s.sup}>Имя* {nameValidate && formik.errors.name}</span>
                                     <input {...formik.getFieldProps("name")} placeholder={'Как вас зовут'}/>
                                 </div>
                                 <div className={s.item}>
-                                    <span className={phoneValidate ? s.red : ''}>Телефон* {phoneValidate && formik.errors.phone}</span>
+                                    <span
+                                        className={phoneValidate ? s.red : ''}>Телефон* {phoneValidate && formik.errors.phone}</span>
                                     <input {...formik.getFieldProps("phone")} placeholder={"Номер телефона"}/>
                                 </div>
                                 <div className={s.item}>
-                                    <span className={emailValidate ? s.red : ''}>E-mail* {emailValidate && formik.errors.email}</span>
+                                    <span
+                                        className={emailValidate ? s.red : ''}>E-mail* {emailValidate && formik.errors.email}</span>
                                     <input {...formik.getFieldProps("email")} placeholder={"Ваш E-mail"}/>
                                 </div>
                                 <div className={s.item}>
@@ -95,8 +120,18 @@ export const FormModal: React.FC<ModalContainerPropsType> = ({children}) => {
                                     <span>Комментарий</span>
                                     <textarea {...formik.getFieldProps("comments")}/>
                                 </div>
+                                {successfulSending === 'res' &&
+                                    <div className={s.item}>
+                                        <span style={{color: "green"}}>Письмо успешно отправилось.</span>
+                                    </div>
+                                }
+                                {successfulSending === 'rej' &&
+                                    <div className={s.item}>
+                                        <span style={{color: "red"}}>Упсс... Попробуйте еще раз.</span>
+                                    </div>
+                                }
                                 <div className={s.item}>
-                                    <button type={'submit'}>ОТПРАВИТЬ</button>
+                                    <button type={'submit'} disabled={loading}>ОТПРАВИТЬ</button>
                                 </div>
                             </form>
                         </div>
